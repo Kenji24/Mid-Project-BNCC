@@ -1,0 +1,465 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-primary{
+    background-color: #1a52c6;
+}
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.head{
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 20px 50px;
+   background: #40A2E3;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   z-index: 100;
+}
+
+.bar{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.bar a{
+    position: relative;
+    margin-left: 20px;
+    color: whitesmoke; 
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.main-title{
+    font-size: 24px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.bar a::before{
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: whitesmoke;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.bar a:hover::before{
+    width: 100%;
+}
+
+.bar p{
+    font-size: 16px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.prof{
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.prof-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin-top: -50px;
+}
+
+ .search{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 0px 10px;
+    margin-top: -30px;
+}
+
+.search-form{
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background: whitesmoke;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+.search-form input{
+    background: transparent;
+    outline: none;
+    border: 0;
+    flex: 1;
+    font-size: 18px;
+    font-weight: 600;
+    color: #40A2E3;
+}
+
+.search-form input::placeholder{
+    color: #40A2E3;
+    font-size: 18px;
+}
+
+.search-form button{
+    border-radius: 20px;
+    background: #1a52c6;
+    cursor: pointer;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.search-form button:hover{
+    border: 2px solid #1a52c6;
+    color: #1a52c6;
+    background: white;
+}
+
+.table-box{
+    position: relative;
+    width: 1300px;
+    height: 600px;
+    background: gainsboro;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.table-header{
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    margin-bottom: 17px;
+}
+
+.table-header h2{
+    padding-top: 10px;
+}
+
+.table-body{
+    background-color: whitesmoke;
+    width: 90%;
+    max-height: 65%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.table-body::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+}
+
+.table-body::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #40A2E3;
+    visibility: hidden;
+}
+
+.table-body:hover::-webkit-scrollbar-thumb{
+    background-color: #40A2E3;
+    visibility: visible;
+}
+
+table{
+    width: 100%;
+}
+
+table, th, td{
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+thead th{
+    position: sticky;
+    top: 0;
+    background-color: #98ABEE;
+    overflow: hidden;
+    z-index: 100;
+}
+
+th, td{
+    padding: 10px;
+    text-align: center;
+}
+
+td{
+    font-size: 16px;
+}
+
+tbody tr:nth-child(even){
+    background-color: #C9D7DD;
+}
+
+.img-box{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #40A2E3;
+}
+
+.profile-picture{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+table button{
+    margin: 2px;
+    padding: 5px 10px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.add-button{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.add{
+    margin-bottom: 40%;
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.add:hover{
+    background: white;
+    border: 2px solid blue;
+    color: blue;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #40A2E3;
+    height: auto;
+    width: 100%;
+    color: #fff;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer-content p{
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.bar:nth-child(3){
+    margin-left: auto;
+}
+
+.bar:nth-child(3) a{
+    margin-left: 20px;
+}
+
+.bar:nth-child(2) a{
+    margin-right: 20px;
+}
+
+.head a:nth-child(2) {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.button-column{
+    width: 250px;
+}
+
+.button-controller{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+}
+
+button{
+    position: relative;
+    margin: 10px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.view-button{
+    height: 40px;
+    width: 60px;
+    background-color: blue;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.view-button:hover{
+    border: 2px solid blue;
+    color: blue;
+    background: white;
+}
+
+.edit-button{
+    height: 40px;
+    width: 60px;
+    background-color: green;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.edit-button:hover{
+    border: 2px solid green;
+    color: green;
+    background: white;
+}
+
+.delete-button{
+    height: 40px;
+    width: 70px;
+    background-color: red;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.delete-button:hover{
+    border: 2px solid red;
+    color: red;
+    background: white;
+}
+
+.center,.content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 101;
+}
+
+.content{
+    opacity: 0;
+    visibility: hidden;
+    width: 400px;
+    height: 270px;
+    background: white;
+    border-radius: 5px;
+    z-index: 101;
+}
+
+.popup-header-red{
+    height: 50px;
+    background: red;
+    overflow: hidden;
+    border-radius: 5px 5px 0 0;
+}
+
+.popup-header-red h2{
+    color: aliceblue;
+    text-align: center;
+    padding-top: 6px;
+}
+
+.untukiconbermasalah{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bi-exclamation-triangle-fill{
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+    height: 80px;
+    width: 80px;
+    border: 3px solid red;
+    text-align: center;
+    padding-bottom: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 50%;
+}
+
+.mbr{
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.line{
+    color: gray;
+}
+
+.button-red{
+    position: absolute;
+    bottom: 20px;
+    right: 25px;
+    border: 1px solid red;
+    padding: 3px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    background: red;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+.button-red:hover{
+    background: white;
+    color: red;
+}
+
+.button-grey{
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    border: 1px solid grey;
+    padding: 3px 8px;
+    cursor: pointer;
+    font-weight: 500;
+    background: grey;
+    color: aliceblue;
+    border-radius: 5px;
+}
+
+.button-grey:hover{
+    background: white;
+    color: gray;
+}
